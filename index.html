@@ -223,6 +223,25 @@
       vertical-align: middle;
     }
 
+.sponsor-logos {
+  display: flex;
+  justify-content: center;  /* 中央揃え */
+  flex-wrap: wrap;          /* 画面が小さい場合は折り返す */
+  gap: 2rem;                /* ロゴ間の隙間 */
+  margin-top: 1rem;
+}
+
+.sponsor-logos img {
+  max-height: 80px;         /* ロゴの高さを揃える */
+  object-fit: contain;      /* 縦横比を保ったまま表示 */
+  transition: transform 0.3s;
+}
+
+.sponsor-logos img:hover {
+  transform: scale(1.1);    /* ホバーで少し拡大 */
+}
+
+    
     /* アニメーション用クラス */
     .slide-right { transform: translateX(100px); }
     .slide-left { transform: translateX(-100px); }
@@ -431,12 +450,17 @@ NoMapsあさひかわのテーマは、<br>
     </ul>
   </section>
 
-    <section id="sponsors" class="fade-in slide-up">
+<section id="sponsors" class="fade-in slide-up">
   <h2>協賛</h2>
-  <p style="text-align: center;">
-    〇〇株式会社 / 〇〇クリエイト / まちづくり〇〇 / 〇〇株式会社 / 〇〇商工会議所 / …
-  </p>
+  <div class="sponsor-logos">
+    <img src="img/logo1.png" alt="協賛1">
+    <img src="img/logo2.png" alt="協賛2">
+    <img src="img/logo3.png" alt="協賛3">
+    <img src="img/logo4.png" alt="協賛4">
+    <img src="img/logo5.png" alt="協賛5">
+  </div>
 </section>
+
 <section id="sponsors" class="fade-in slide-up">
   <h2>後援</h2>
   <p style="text-align: center;">
@@ -487,6 +511,7 @@ NoMapsあさひかわのテーマは、<br>
 
 </body>
 </html>
+
 
 
 
